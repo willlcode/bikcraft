@@ -1,0 +1,26 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 600px;
+  color: #111111;
+}
+
+img {
+  max-width: 100%;
+  display: blick;
+}
+
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
+
+a {
+  color: inherit;
+}
