@@ -7,24 +7,30 @@
   margin-bottom: 60px;
 }
 
-.perguntas dl > div { /* Modo para manusear apenas com div's dentro da dl */
+.perguntas dl > div {
+  /* Modo para manusear apenas com div's dentro da dl */
   padding: 20px;
   border-radius: 4px;
 }
 
-.perguntas dl > div:nth-child(odd) { /* Modo para manusear apenas as div's impares */ 
+.perguntas dl > div:nth-child(odd) {
+  /* Modo para manusear apenas as div's impares */
   background-color: var(--cor-1);
 }
 
-.perguntas dt {
+.perguntas button {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
 }
 
-.perguntas dt::before {
+.perguntas button::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -32,7 +38,7 @@
   background-color: var(--cor-p1);
 }
 
-.perguntas dt::after {
+.perguntas button::after {
   content: "";
   display: inline-block;
   width: 14px;
@@ -41,14 +47,24 @@
   transition: 0.3s;
 }
 
-.perguntas dt:hover::after {
+.perguntas button:hover::after,
+.perguntas button[aria-expanded="true"]::after {
+  /* Forma para manipular atributo */
   transform: rotate(180deg);
 }
 
 .perguntas dd {
-padding-left: 20px;
-padding-top: 16px;
-max-width: 80ch;
+  display: none;
+}
+
+.perguntas dd.ativa {
+  display: block;
+}
+
+.perguntas dd {
+  padding-left: 20px;
+  padding-top: 16px;
+  max-width: 80ch;
 }
 
 @media (max-width: 800px) {
