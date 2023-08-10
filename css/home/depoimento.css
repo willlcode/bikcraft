@@ -46,8 +46,11 @@
 }
 
 @media (min-width: 1200px) {
+  .depoimento {
+    max-height: 600px;
+  }
   .depoimento img {
-    max-height: 520px;
+    max-height: 600px;
   }
 }
 
